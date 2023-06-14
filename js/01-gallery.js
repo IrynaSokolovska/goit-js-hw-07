@@ -24,6 +24,7 @@ console.log(galleryItems);
 </li>
 
 // import { galleryItems } from "./gallery-items.js";
+
 // const galleryEl = document.querySelector(".gallery");
 const galleryList = galleryItems
   .map((item) => {
