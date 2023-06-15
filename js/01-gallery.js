@@ -4,10 +4,10 @@ import { galleryItems } from './gallery-items.js';
 const list = document.querySelector(".gallery");
 const markup = galleryItems
   .map(
-    ({ preview, original, description }) => `<li class="gallery__item">
+    ({ preview, original, description }) => 
+    `<li class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
-    <img
-      class="gallery__image"
+    <img class="gallery__image"
       src="${preview}"
       data-source="${original}"
       alt="${description}"
@@ -24,7 +24,7 @@ const openOriginalImg = function (event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-  
+
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="600" height="600">
 `);
