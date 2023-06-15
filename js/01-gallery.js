@@ -24,11 +24,12 @@ const openOriginalImg = function (event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
+  
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="600" height="600">
 `);
   instance.show();  
-  
+
 const closeModal = function (event) {
     event.preventDefault();
     if (event.code === 'Escape') {
